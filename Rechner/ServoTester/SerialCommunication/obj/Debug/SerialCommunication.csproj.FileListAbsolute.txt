@@ -1,0 +1,8 @@
+C:\Temp\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.exe
+C:\Temp\SerialCommunication\SerialCommunication\bin\Debug\SerialCommunication.pdb
+C:\Temp\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csprojResolveAssemblyReference.cache
+C:\Temp\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.Form1.resources
+C:\Temp\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.Properties.Resources.resources
+C:\Temp\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.csproj.GenerateResource.Cache
+C:\Temp\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.exe
+C:\Temp\SerialCommunication\SerialCommunication\obj\Debug\SerialCommunication.pdb
