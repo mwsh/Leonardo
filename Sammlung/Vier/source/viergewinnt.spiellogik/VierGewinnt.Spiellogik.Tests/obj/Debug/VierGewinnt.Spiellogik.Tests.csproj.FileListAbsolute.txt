@@ -10,3 +10,15 @@ E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin
 E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.csprojResolveAssemblyReference.cache
 E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.dll
 E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.pdb
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Tests.dll
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Tests.pdb
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\NBehave.Spec.NUnit.dll
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\nunit.framework.dll
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Contracts.dll
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.dll
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.pdb
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\nunit.framework.xml
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Contracts.pdb
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.csprojResolveAssemblyReference.cache
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.dll
+C:\Users\michael.schneider\Documents\GitHub\Leonardo\Sammlung\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.pdb

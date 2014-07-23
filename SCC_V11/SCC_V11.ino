@@ -15,6 +15,7 @@ int _val=0;
 
 int _wait;           //Wait Time between every Step
 int _max;            //Var to count the next step
+int _presure =0;     //presure for gripper
 
 int _newPos[6];      //the next Position per Servo
 int _actualPos[6];   //the actual Position per Servo
@@ -43,11 +44,11 @@ void setup()
   SCmd.addCommand("ONE", MoveOne);
   SCmd.addCommand("AAS", AdjustAll);
   SCmd.addCommand("PAS", PositionAll);
-  SCmd.addCommand("PAP", PositionAllPresure);
   SCmd.addCommand("SSP", SetStartPosition);
   SCmd.addCommand("MSP", MoveSpeed);
   SCmd.addCommand("WAI", Wait);
   SCmd.addCommand("GEP", GetPresure);  
+  SCmd.addCommand("SEP", SetPresure);
   SCmd.addCommand("MEM", Mem);            
   SCmd.addCommand("CLR", Clr);          
   SCmd.addDefaultHandler(unrecognized);		
@@ -122,32 +123,33 @@ void Help()
   Serial.println(F("Servo Controller V 1.0"));
   Serial.println(F("-------------------------------------------------------------------------------"));
   Serial.println(F("Commands:"));
+  Serial.println(F("AAS n0 n1 n2 n3 n4 n5  : adjust all Servos to Position 'nx'"));
   Serial.println(F("ADJ s n                : set Position for Servo 's' to 'n' (0 - 180) no Move"));
-  Serial.println(F("SMI s n                : set min Value for Servo 's' to Position 'n'."));
-  Serial.println(F("                         multiply by 4us. Default = 200 => 854us"));
-  Serial.println(F("SMA s n                : set max Value for Servo 's' to Position 'n'"));
-  Serial.println(F("                         multiple by 4us. Default 580 => 2360us"));
-  Serial.println(F("MEP n                  : move all Servos to Memory Position 'n' (0-20)"));
-  Serial.println(F("                         0 = Start Position"));
+  Serial.println(F("CLR n                  : clear EEPROM from 20 - n"));
+  Serial.println(F("GEP                    : read analog Value from Port 0"));
   Serial.println(F("HLD                    : write Wait Time to EEPROM"));
   Serial.println(F("INF                    : shows the Servo Settings and Wait Time"));
   Serial.println(F("IMI                    : shows the Minimum Values per Servo"));
   Serial.println(F("IMA                    : shows the Maximum Values per Servo"));
   Serial.println(F("ISP                    : shows the Start Position per Servo"));
   Serial.println(F("IME n                  : shows Servo Positions at Memory Position 'n'")); 
-  Serial.println(F("MAS                    : Move all Servos to new Positions"));
+  Serial.println(F("MAS                    : Move all Servos to new Positions."));
+  Serial.println(F("                         if presure is != n5 will stop if presure is arrived"));  
+  Serial.println(F("MEM n                  : Shwos the Values in EEPROM from 1 - n"));
+  Serial.println(F("MEP n                  : move all Servos to Memory Position 'n' (0-20)"));
+  Serial.println(F("                         0 = Start Position"));
+  Serial.println(F("MSP s n                : move Servo 's' in Speed Mode to Position 'n' (0-180)"));
   Serial.println(F("WEP n                  : write Servo Settings to Memory Position 'n' (1-20)"));
   Serial.println(F("ONE s n                : move Servo 's' to Position 'n'"));
-  Serial.println(F("AAS n0 n1 n2 n3 n4 n5  : adjust all Servos to Position 'nx'"));
+  Serial.println(F("                         if presure is != n5 will stop if presure is arrived"));  
   Serial.println(F("PAS n0 n1 n2 n3 n4 n5  : adjust all Servos to Position 'nx' and move"));
-  Serial.println(F("PAP n0 n1 n2 n3 n4 p   : adjust all Servos to Position 'nx' and move"));
-  Serial.println(F("                         use presaure p for Servo 5"));
+  Serial.println(F("                         if presure is != n5 will stop if presure is arrived"));
+  Serial.println(F("SMI s n                : set min Value for Servo 's' to Position 'n'."));
+  Serial.println(F("                         multiply by 4us. Default = 200 => 854us"));
+  Serial.println(F("SMA s n                : set max Value for Servo 's' to Position 'n'"));
+  Serial.println(F("                         multiple by 4us. Default 580 => 2360us"));
   Serial.println(F("SSP s n                : set Start Position for Servo 's' to 'n'"));
-  Serial.println(F("MSP s n                : move Servo 's' in Speed Mode to Position 'n' (0-180)"));
   Serial.println(F("WAI n                  : set Wait Time between each Step 'n' in ms. Def. 10ms"));
-  Serial.println(F("MEM n                  : Shwos the Values in EEPROM from 1 - n"));
-  Serial.println(F("CLR n                  : clear EEPROM from 20 - n"));
-  Serial.println(F("GEP                    : read analog Value from Port 0"));
   Serial.println(F("?                      : show Help"));
   Serial.println(F(""));
 }
@@ -156,6 +158,18 @@ void GetPresure()
 {
   _val = analogRead(_analogPin);
   Serial.println(_val);
+}
+
+void SetPresure()
+{
+  int n = 0;
+  int test = CheckArgument(&n);
+  if (test > 0)
+  {
+    return;
+  }
+  _presure = n;
+  writeAck();
 }
 
 void writeAck()
@@ -289,60 +303,60 @@ void SetStartPosition()
     Serial.println(F("NACK - Wrong Servo Number"));
 }
 
+//void MoveAll()
+//{
+//  int counter[6];
+//
+//  for (int i = 0; i < 6; i++)
+//  {
+//    counter[i] = (_max / 2); //Initialice the Counter wit the Half of the biggest Difference from all Servos
+//    //  Serial.println(counter[i]);
+//  }
+//
+//  //For every needed Step we do the Sequence
+//  for (int j = 1; j <= _max; j++) 
+//  {
+//    //    Serial.print(F("Step: "));
+//    //    Serial.println(j);
+//
+//    //For every Servo
+//    for (int i = 0; i < 6; i++)
+//    {
+//      //If we have a pos. Value substract the diff, otherwise add the Max Value - Diff
+//      if (counter[i] >= 0)
+//        counter[i] -= _diff[i];
+//      else
+//        counter[i] += _max - _diff[i];
+//
+//      //Correct the direction of the Move and write the next Position to the Servo
+//      if(counter[i] < 0)
+//        _actualPos[i] += 1 * _direction[i];
+//
+//      pwm.setPWM(i, 0, map(_actualPos[i], 0, 180, _minValue[i], _maxValue[i]));
+//
+//      //      Serial.print(F("Servo: "));
+//      //      Serial.print(i+1);
+//      //      Serial.print(F(" newPos: "));
+//      //      Serial.print(_newPos[i]);
+//      //      Serial.print(F(" Position: "));
+//      //      Serial.println(_actualPos[i]);
+//
+//    }
+//    delay(_wait);
+//  }
+//
+//  //Clear Diff and Max because actualPos == newPos
+//  for (int i = 0; i < 6; i++)
+//  {
+//    _diff[i] = 0;
+//  }
+//  _max = 0;
+//
+//  writeAck();
+//
+//}
+
 void MoveAll()
-{
-  int counter[6];
-
-  for (int i = 0; i < 6; i++)
-  {
-    counter[i] = (_max / 2); //Initialice the Counter wit the Half of the biggest Difference from all Servos
-    //  Serial.println(counter[i]);
-  }
-
-  //For every needed Step we do the Sequence
-  for (int j = 1; j <= _max; j++) 
-  {
-    //    Serial.print(F("Step: "));
-    //    Serial.println(j);
-
-    //For every Servo
-    for (int i = 0; i < 6; i++)
-    {
-      //If we have a pos. Value substract the diff, otherwise add the Max Value - Diff
-      if (counter[i] >= 0)
-        counter[i] -= _diff[i];
-      else
-        counter[i] += _max - _diff[i];
-
-      //Correct the direction of the Move and write the next Position to the Servo
-      if(counter[i] < 0)
-        _actualPos[i] += 1 * _direction[i];
-
-      pwm.setPWM(i, 0, map(_actualPos[i], 0, 180, _minValue[i], _maxValue[i]));
-
-      //      Serial.print(F("Servo: "));
-      //      Serial.print(i+1);
-      //      Serial.print(F(" newPos: "));
-      //      Serial.print(_newPos[i]);
-      //      Serial.print(F(" Position: "));
-      //      Serial.println(_actualPos[i]);
-
-    }
-    delay(_wait);
-  }
-
-  //Clear Diff and Max because actualPos == newPos
-  for (int i = 0; i < 6; i++)
-  {
-    _diff[i] = 0;
-  }
-  _max = 0;
-
-  writeAck();
-
-}
-
-void MoveAllPresure(int presure)
 {
   
   int counter[6];
@@ -383,7 +397,7 @@ void MoveAllPresure(int presure)
 //        Serial.print("Ist: ");
 //        Serial.println(_val);
                 
-        if (_val < presure)
+        if (_val < _presure)
         {
 //          Serial.println(F("Servo 5 Move"));
           pwm.setPWM(i, 0, map(_actualPos[i], 0, 180, _minValue[i], _maxValue[i]));
@@ -640,34 +654,6 @@ void PositionAll()
   }
 
   MoveAll();
-}
-
-void PositionAllPresure()
-{
-  int newPos[5];
-  char *arg;
-
-  for(int i=0; i<6; i++)
-  {
-    arg = SCmd.next();
-    if (arg != NULL)
-    {
-      if (i==5)
-      {        
-        SetNewPos(5, 180);
-      }
-      else
-      {
-        SetNewPos(i, atoi(arg));
-      }
-    }
-    else {
-      Serial.println(F("NACK - Not enough arguments"));
-      return;
-    }
-  }
-
-  MoveAllPresure(atoi(arg));
 }
 
 void AdjustAll()

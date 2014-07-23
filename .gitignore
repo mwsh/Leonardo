@@ -34,3 +34,9 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+Sammlung/Vier/source/viergewinnt.spiellogik/VierGewinnt.Spiellogik.Tests/obj/Debug/VierGewinnt.Spiellogik.Tests.pdb
+Sammlung/Vier/source/viergewinnt.spiellogik/VierGewinnt.Spiellogik.Tests/bin/Debug/VierGewinnt.Spiellogik.Contracts.dll
+*.pdb
+*.dll
+*.dll
