@@ -1,0 +1,5 @@
+E:\4 Gewinnt\Vier\bin\VierGewinnt.Spiellogik.dll
+E:\4 Gewinnt\Vier\bin\VierGewinnt.Spiellogik.pdb
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik\obj\Debug\VierGewinnt.Spiellogik.csprojResolveAssemblyReference.cache
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik\obj\Debug\VierGewinnt.Spiellogik.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik\obj\Debug\VierGewinnt.Spiellogik.pdb

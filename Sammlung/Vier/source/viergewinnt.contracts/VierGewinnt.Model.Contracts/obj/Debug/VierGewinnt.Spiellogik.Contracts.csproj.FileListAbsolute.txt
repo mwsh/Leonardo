@@ -1,0 +1,4 @@
+E:\4 Gewinnt\Vier\contracts\VierGewinnt.Spiellogik.Contracts.dll
+E:\4 Gewinnt\Vier\contracts\VierGewinnt.Spiellogik.Contracts.pdb
+E:\4 Gewinnt\Vier\source\viergewinnt.contracts\VierGewinnt.Model.Contracts\obj\Debug\VierGewinnt.Spiellogik.Contracts.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.contracts\VierGewinnt.Model.Contracts\obj\Debug\VierGewinnt.Spiellogik.Contracts.pdb

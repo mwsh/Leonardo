@@ -1,0 +1,12 @@
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Tests.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Tests.pdb
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\NBehave.Spec.NUnit.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\nunit.framework.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Contracts.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.pdb
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\nunit.framework.xml
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\bin\Debug\VierGewinnt.Spiellogik.Contracts.pdb
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.csprojResolveAssemblyReference.cache
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.dll
+E:\4 Gewinnt\Vier\source\viergewinnt.spiellogik\VierGewinnt.Spiellogik.Tests\obj\Debug\VierGewinnt.Spiellogik.Tests.pdb

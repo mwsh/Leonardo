@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VierGewinnt.Spiellogik.Tests", "VierGewinnt.Spiellogik.Tests\VierGewinnt.Spiellogik.Tests.csproj", "{0CF3C0DF-6789-4146-9CCE-08D644DCB26F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VierGewinnt.Spiellogik", "VierGewinnt.Spiellogik\VierGewinnt.Spiellogik.csproj", "{F86F25EF-6E5E-4922-90BE-C6D3E1C7B6E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CF3C0DF-6789-4146-9CCE-08D644DCB26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CF3C0DF-6789-4146-9CCE-08D644DCB26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CF3C0DF-6789-4146-9CCE-08D644DCB26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CF3C0DF-6789-4146-9CCE-08D644DCB26F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86F25EF-6E5E-4922-90BE-C6D3E1C7B6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86F25EF-6E5E-4922-90BE-C6D3E1C7B6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86F25EF-6E5E-4922-90BE-C6D3E1C7B6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86F25EF-6E5E-4922-90BE-C6D3E1C7B6E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
